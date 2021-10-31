@@ -1,4 +1,5 @@
 package 排序算法.Kotlin
+
 /**
  * 堆排序：
  *
@@ -12,7 +13,7 @@ package 排序算法.Kotlin
  *      因此对于相同的关键字就可能出现排在后面的关键字被交换到前面来的情况
  * @param array
  */
-fun heapSort(array: Array<Int>){
+fun heapSort(array: Array<Int>) {
     val n = array.size
     //构建大顶堆
     //从构建的二叉树的叶子节点的上一层节点开始下沉操作，一直到索引为0的位置，也就是根节点，

@@ -14,11 +14,12 @@ public class demo1 {
 
      */
     static final int MAXIMUM_CAPACITY = 1 << 30;
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        map.put(1,100);
-        map.put(1,200);
-        map.put(3,300);
+        map.put(1, 100);
+        map.put(1, 200);
+        map.put(3, 300);
         map.get(1);
         //map.remove();
         int h;
@@ -27,6 +28,7 @@ public class demo1 {
         System.out.println(map);
 
     }
+
     static final int tableSizeFor(int cap) {
         int n = -1 >>> Integer.numberOfLeadingZeros(cap - 1);
         return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;

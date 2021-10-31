@@ -9,22 +9,22 @@ import java.util.*
  * 空间复杂度O(1)
  * 稳定性：稳定排序
  */
-fun bubbleSort(arrays: Array<Int>){
+fun bubbleSort(arrays: Array<Int>) {
     val n = arrays.size
-    if(n < 2){
+    if (n < 2) {
         return
     }
-    for(i in 0 until n-1){
+    for (i in 0 until n - 1) {
         var flag = 0
-        for(j in 0 until n-i-1){
-            if(arrays[j] > arrays[j+1]){
+        for (j in 0 until n - i - 1) {
+            if (arrays[j] > arrays[j + 1]) {
                 flag++
                 val temp = arrays[j]
-                arrays[j] = arrays[j+1]
-                arrays[j+1] = temp
+                arrays[j] = arrays[j + 1]
+                arrays[j + 1] = temp
             }
         }
-        if(flag == 0){
+        if (flag == 0) {
             break
         }
     }

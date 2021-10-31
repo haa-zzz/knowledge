@@ -10,10 +10,10 @@ public class VolatileTest {
     public static void main(String[] args) {
 
         final VolatileTest volatileTest = new VolatileTest();
-        for(int i=0;i<3;i++){
+        for (int i = 0; i < 3; i++) {
 
             new Thread(() -> {
-                for(int j=0;j<30;j++)
+                for (int j = 0; j < 30; j++)
                     volatileTest.increase();
             }).start();
         }

@@ -9,7 +9,7 @@ public class LinkedList源码 {
         list.add(1);
         list.addFirst(2);
         list.addLast(3);
-        list.add(1,3);
+        list.add(1, 3);
         list.get(0);
         list.getFirst();
         list.getLast();

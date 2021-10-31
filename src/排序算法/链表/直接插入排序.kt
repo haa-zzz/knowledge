@@ -12,7 +12,7 @@ class 直接插入排序 {
         空间复杂度O(1)
      */
     fun insertionSort(head: ListNode?): ListNode? {
-        if(head?.next == null)
+        if (head?.next == null)
             return head
         val node = ListNode(0)
         //最后一个排好序的节点
@@ -22,12 +22,12 @@ class 直接插入排序 {
 
         node.next = lastSortNode
 
-        while(curr != null){
-            if(lastSortNode!!.`val` < curr.`val` ) {
+        while (curr != null) {
+            if (lastSortNode!!.`val` < curr.`val`) {
                 lastSortNode = lastSortNode.next
-            }else{
+            } else {
                 var pre = node
-                while (curr.`val` > pre.next.`val`){
+                while (curr.`val` > pre.next.`val`) {
                     pre = pre.next
                 }
                 lastSortNode.next = curr.next

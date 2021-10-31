@@ -17,21 +17,22 @@ package 排序算法.Kotlin
  *  空间复杂度O(1)
  * @param array
  */
-fun insertionSort(arrays : Array<Int>){
+fun insertionSort(arrays: Array<Int>) {
     val n = arrays.size
-    if(n < 2 )
+    if (n < 2)
         return
     var cur: Int
-    for( i in 0 until n-1){
-        cur = arrays[i+1]
+    for (i in 0 until n - 1) {
+        cur = arrays[i + 1]
         var count = i
-        while(count >= 0 && cur < arrays[count]){
-            arrays[count+1] = arrays[count]
+        while (count >= 0 && cur < arrays[count]) {
+            arrays[count + 1] = arrays[count]
             count--
         }
-        arrays[ count+1 ] = cur
+        arrays[count + 1] = cur
     }
 }
+
 /**
  * 直接插入排序的优化
  *
@@ -52,19 +53,19 @@ fun insertionSort(arrays : Array<Int>){
  * @param array
  */
 
-fun binaryInsertionSort(arrays : Array<Int>){
+fun binaryInsertionSort(arrays: Array<Int>) {
     val n = arrays.size
-    if(n < 2 )
+    if (n < 2)
         return
     var cur: Int
-    var low : Int
-    var high : Int
+    var low: Int
+    var high: Int
 
-    for( i in 0 until n-1){
-        cur = arrays[i+1]
+    for (i in 0 until n - 1) {
+        cur = arrays[i + 1]
         low = 0
         high = i
-        while(low <= high){
+        while (low <= high) {
             val mid = low + (high - low) / 2
 
             if (arrays[mid] > cur) {
@@ -74,7 +75,7 @@ fun binaryInsertionSort(arrays : Array<Int>){
             }
         }
         for (j in i downTo low) {
-            arrays[j+1] = arrays[j]
+            arrays[j + 1] = arrays[j]
         }
         arrays[low] = cur
     }

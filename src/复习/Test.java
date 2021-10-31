@@ -21,7 +21,7 @@ public class Test {
         styles.add(font1);
         styles.add(font2);
         styles.add(font);
-        styles.removeIf( e -> e instanceof Font1);
-        
+        styles.removeIf(e -> e instanceof Font1);
+
     }
 }

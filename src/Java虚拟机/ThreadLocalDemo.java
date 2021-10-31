@@ -5,9 +5,8 @@ import java.lang.reflect.Field;
 public class ThreadLocalDemo {
 
 
-
     public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException, InterruptedException {
-        Thread t = new Thread(()->test("abc",false));
+        Thread t = new Thread(() -> test("abc", false));
         t.start();
         t.join();
         System.out.println("--gc后--");
@@ -17,9 +16,10 @@ public class ThreadLocalDemo {
 
 
     }
-    private static void test(String s,boolean isGC)  {
+
+    private static void test(String s, boolean isGC) {
         try {
-           new ThreadLocal<>().set(s);
+            new ThreadLocal<>().set(s);
 
             if (isGC) {
                 System.gc();

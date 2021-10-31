@@ -7,8 +7,9 @@ import java.util.concurrent.FutureTask;
 public class CallableTest {
     private static final Callable<String> callable = new MyCallable();
     private static final FutureTask<String> futureList = new FutureTask<>(callable);
+
     public static void main(String[] args) {
-        Thread thread = new Thread(futureList,"有返回值的线程");
+        Thread thread = new Thread(futureList, "有返回值的线程");
         thread.start();
         try {
             try {
@@ -21,6 +22,7 @@ public class CallableTest {
         }
     }
 }
+
 class MyCallable implements Callable<String> {
     @Override
     public String call() throws Exception {

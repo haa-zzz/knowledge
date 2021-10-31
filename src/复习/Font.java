@@ -15,10 +15,11 @@ public class Font {
     }
 }
 
-class Font1 extends Font{
+class Font1 extends Font {
     boolean isTrue;
 
 }
-class Font2 extends Font{
+
+class Font2 extends Font {
     int number;
 }

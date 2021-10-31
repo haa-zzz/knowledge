@@ -3,7 +3,8 @@ package demo;
 public interface TestInterface {
 
 }
-abstract class TestAbstract{
+
+abstract class TestAbstract {
     {
         int a;
     }

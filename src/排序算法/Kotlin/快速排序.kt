@@ -18,28 +18,30 @@ import 排序算法.直接插入排序
  * @param left  要排序的第一个元素的索引(包括)
  * @param right 最后一个要排序的元素的索引(不包括)
  */
-fun quickSort(array : Array<Int>, left : Int, right : Int){
-    if(left < right-1){     //当 left == right-1时，只有一个元素，默认排好序了
+fun quickSort(array: Array<Int>, left: Int, right: Int) {
+    if (left < right - 1) {     //当 left == right-1时，只有一个元素，默认排好序了
         //先排一个，获取中轴元素所在的索引
-        val pivot = partition(array,left,right-1)
+        val pivot = partition(array, left, right - 1)
         //递归的排左右两边
-        quickSort(array , left , pivot)
-        quickSort(array ,pivot + 1 , right)
+        quickSort(array, left, pivot)
+        quickSort(array, pivot + 1, right)
     }
 }
-fun partition(array: Array<Int>, low : Int, high: Int): Int{
+
+fun partition(array: Array<Int>, low: Int, high: Int): Int {
     //选取最左边作为中轴元素
     val pivotKey = array[low]
     var low = low
     var high = high
-    while(low < high ){
-        while(low < high && pivotKey <= array[high] )   high--
-        swap(array,low,high)
-        while(low < high && pivotKey >= array[low] )    low++
-        swap(array,low,high)
+    while (low < high) {
+        while (low < high && pivotKey <= array[high]) high--
+        swap(array, low, high)
+        while (low < high && pivotKey >= array[low]) low++
+        swap(array, low, high)
     }
     return low
 }
+
 /*
     优化：
     1.优化选取轴 - 三数取中法
@@ -63,7 +65,7 @@ fun quickSortPro(array: Array<Int>, left: Int, right: Int) {
             //递归一次后，low就失去左右，可以让 low = pivot+1，加上while循环相当于quickSort(array, pivot + 1, right);
         }
     } else {                                               //小于阈值采用插入排序
-       // 直接插入排序.insertionSort(array)
+        // 直接插入排序.insertionSort(array)
     }
 }
 

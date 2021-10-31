@@ -33,7 +33,7 @@ public class 集合 {
                 return o1.compareTo(o2);
             }
         });
-        Collections.sort(list, (o1,o2)->o1.compareTo(o2));
+        Collections.sort(list, (o1, o2) -> o1.compareTo(o2));
 
         //知识点三
         //Queue集合
@@ -42,10 +42,10 @@ public class 集合 {
         ArrayDeque<Integer> stack = new ArrayDeque();
         stack.push(1);
         stack.push(2);
-        stack.push(3);					//入栈操作
+        stack.push(3);                    //入栈操作
         stack.push(4);
         System.out.println(stack);
-        System.out.println(stack.pop()); 	//栈顶元素出栈
+        System.out.println(stack.pop());    //栈顶元素出栈
         System.out.println(stack);
 
     }

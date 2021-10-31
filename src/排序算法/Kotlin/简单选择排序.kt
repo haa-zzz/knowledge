@@ -43,8 +43,8 @@ fun selectionSortPro(array: Array<Int>) {
         return
     }
     var left = 0
-    var right = n-1
-    while(left < right){
+    var right = n - 1
+    while (left < right) {
         var minIndex = left
         var maxIndex = right
 
@@ -56,7 +56,7 @@ fun selectionSortPro(array: Array<Int>) {
             if (array[maxIndex] < array[i]) {
                 maxIndex = i
             }
-            if(minIndex != left){
+            if (minIndex != left) {
                 var temp = array[minIndex]
                 array[minIndex] = array[left]
                 array[left] = temp
@@ -64,7 +64,7 @@ fun selectionSortPro(array: Array<Int>) {
 
             if (left == maxIndex) //如果left索引位置为最大值，由于left和minIndex交换了，所以 maxIndex = minIndex;
                 maxIndex = minIndex //还有一种情况，minIndex索引位置为最大值，说明最小值和最大值的索引相同，
-                                    // 即只剩最后一个元素了，此时可以不做处理
+            // 即只剩最后一个元素了，此时可以不做处理
             if (maxIndex != right) {
                 array[right] = array[right] xor array[maxIndex] //交换两个数
                 array[maxIndex] = array[right] xor array[maxIndex]

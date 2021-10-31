@@ -1,9 +1,10 @@
 package Java虚拟机;
 
 public class Hello {
-    class Inner{
+    class Inner {
         int c = 3;
     }
+
     public static void main(String[] args) {
         int i = 0;
         int a = i++;

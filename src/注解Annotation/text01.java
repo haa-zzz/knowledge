@@ -12,8 +12,9 @@ public class text01 {
 
     }
 }
-@Target(value = {ElementType.METHOD,ElementType.ANNOTATION_TYPE})     //作用位置约束
+
+@Target(value = {ElementType.METHOD, ElementType.ANNOTATION_TYPE})     //作用位置约束
 @Retention(value = RetentionPolicy.RUNTIME)
-@interface myAnnotation{
+@interface myAnnotation {
 
 }

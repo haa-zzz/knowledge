@@ -1,6 +1,6 @@
 package 复习;
 
-public class student implements Comparable<student>{
+public class student implements Comparable<student> {
     private String name;
     private int number;
 

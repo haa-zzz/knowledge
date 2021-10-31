@@ -11,22 +11,22 @@ import static 排序算法.快速排序.quickSortPro;
 
 
 public class demo {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int n;
         Scanner in = new Scanner(System.in);
         n = in.nextInt();
         int[] arr = new int[n];
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             arr[i] = in.nextInt();
         }
 
         //bubbleSort(arr);
         //quickSortPro(arr,0,n);
         RadioSort(arr);
-        for(int i = 0; i < n; i++){
-            System.out.print(arr[i]+"  ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + "  ");
         }
     }
 
-   
+
 }

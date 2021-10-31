@@ -13,13 +13,13 @@ public class ArrayList源码 {
         ArrayList<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
-        list.add(3,3);
+        list.add(3, 3);
         list.size();
         int value = list.get(0);
         list.remove(1);
         // 获取迭代器
         Iterator<Integer> it = list.iterator();
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             System.out.println(it.next());
         }
     }
