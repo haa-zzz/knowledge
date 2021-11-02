@@ -1,12 +1,11 @@
 
+/**
+ * 死锁模型
+ * 当程序开始执行时，创建两个线程，分别执行不同的 synchronized 方法块；并且都在Thread.sleep(1000);处停下来，
+ * 此时线程1持有DeanLock.class在等待Object.class的持有权，线程2持有Object.class在等待DeanLock.class的持有权，
+ * 双方都相互等待，就形成了死锁的僵局。
+ */
 public class DeanLock {
-    /*
-    当程序开始执行时，创建两个线程，分别执行不同的synchronized 方法块；并且都在Thread.sleep(1000);处停下来，
-    此时当线程1先sleep结束后；准备用Main.class开 synchronized 这把锁进入 synchronized (Main.class) 方法块，但是发现线程2还没有苏醒，
-    所以 线程1就等着线程2执行完毕，释放出 Main.class 钥匙，这时候 线程2苏醒了，准备拿String.class 这把钥匙，
-    去开synchronized 这把锁，进入synchronized (String.class) 方法块；但是发现线程1 也在等着 线程2释放 Main.class钥匙，所以就导致
-    线程1等着线程2 释放 Main.class钥匙， 线程2等着线程1 释放 String.class 这把钥匙，所以这个程序就僵持住了，成了一个死锁的程序；
-     */
     public static void main(String[] args) {
         new Thread(() -> {
             try {
@@ -37,7 +36,5 @@ public class DeanLock {
                 e.printStackTrace();
             }
         }).start();
-
     }
-
 }
