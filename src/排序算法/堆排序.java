@@ -45,7 +45,7 @@ public class 堆排序 {
         //开始下沉
         while (child <= n) {
             // 如果右孩子节点比左孩子大，则定位到右孩子
-            if (child + 1 <= n && arr[child] < arr[child + 1])
+            if ( child + 1 <= n && arr[child] < arr[child + 1] )
                 child++;
             // 如果孩子节点小于或等于父节点，则下沉结束
             if (arr[child] <= temp) break;
@@ -56,4 +56,5 @@ public class 堆排序 {
         }
         arr[parent] = temp;
     }
+
 }
