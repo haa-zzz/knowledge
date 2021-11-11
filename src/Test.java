@@ -1,9 +1,7 @@
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
+
 
 public class Test {
-
     public static void main(String[] args) {
         int[] temp=new int[]{2,5,8,7,6,3,9,7};
         ArrayList hh=headSort(temp,4);
