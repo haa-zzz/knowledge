@@ -2,11 +2,7 @@ package demo
 
 //分为三种
 
-object Singleton {
-
-
-}
 
 fun main() {
-    val singleton = Singleton
+    val singleton = SingleTon3.getInstance()
 }
