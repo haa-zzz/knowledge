@@ -8,6 +8,7 @@ public class ConcurrentHashMap源码分析 {
 
         concurrent.put(1, 2);
         concurrent.get(1);
+        concurrent.size();
     }
 
 }
