@@ -16,6 +16,7 @@ class Node {
     private Node rightNode;
     //结点的权值
     private double weight;
+
     public Node(String data, double weight) {
         this.data = data;
         this.weight = weight; }
